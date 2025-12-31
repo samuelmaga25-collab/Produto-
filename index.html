@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método Lucrativo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#000;
+  color:#fff;
+}
+
+.container{
+  max-width:420px;
+  margin:auto;
+  padding:24px 20px 40px;
+}
+
+/* CONTADOR */
+.top-timer{
+  border:2px solid #ff4fa3;
+  border-radius:16px;
+  text-align:center;
+  padding:16px 10px;
+  margin-bottom:28px;
+  animation:pulse 1s infinite;
+}
+
+.top-timer span{
+  font-size:14px;
+  font-weight:600;
+}
+
+#timer{
+  font-size:34px;
+  font-weight:800;
+  color:#ff4fa3;
+  letter-spacing:2px;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+
+/* TÍTULO */
+h1{
+  text-align:center;
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:26px;
+}
+
+/* BOTÃO ESTILO WATCH MORE */
+.button{
+  display:block;
+  background: linear-gradient(180deg, #ff5bbd 0%, #c2187a 100%);
+  color:#fff;
+  padding:18px 26px;
+  margin:22px 0;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:15px;
+  text-align:center;
+  position:relative;
+
+  box-shadow:
+    0 10px 28px rgba(194,24,122,0.55),
+    inset 0 2px 0 rgba(255,255,255,0.35);
+  transition:all .25s ease;
+}
+
+/* BRILHO SUPERIOR */
+.button::after{
+  content:"";
+  position:absolute;
+  top:4px;
+  left:12px;
+  right:12px;
+  height:42%;
+  border-radius:999px;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.45),
+    rgba(255,255,255,0)
+  );
+  pointer-events:none;
+}
+
+/* HOVER */
+.button:hover{
+  transform:translateY(-2px);
+  box-shadow:
+    0 14px 36px rgba(194,24,122,0.7),
+    inset 0 2px 0 rgba(255,255,255,0.4);
+}
+
+/* CLICK */
+.button:active{
+  transform:translateY(2px);
+  box-shadow:
+    0 6px 16px rgba(194,24,122,0.45),
+    inset 0 2px 0 rgba(255,255,255,0.25);
+}
+
+/* MINI PRODUTO */
+.mini{
+  background: linear-gradient(180deg, #ffffff 0%, #e9e9e9 100%);
+  color:#000;
+  box-shadow:
+    0 10px 26px rgba(255,255,255,0.35),
+    inset 0 2px 0 rgba(0,0,0,0.08);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-timer">
+  <span>⏳ OFERTA EXPIRA EM</span>
+  <div id="timer">04:00</div>
+</div>
+
+<h1>ESCOLHA O MÉTODO LUCRATIVO PARA EMPREENDER</h1>
+
+<a class="button" href="https://pay.kiwify.com.br/kxoDg9X?afid=G5a34OEa">
+Curso Completo de Bolos Caseiros – 1.500 Receitas
+</a>
+
+<a class="button" href="https://pay.kiwify.com.br/lEOUyx1?afid=05cXXGQh">
+Geladinhos Gourmet – 300 Receitas
+</a>
+
+<a class="button" href="https://pay.kiwify.com.br/P7Q5xuq?afid=lgZCOUfw">
+Marmita Fit – Apostilas + Vídeos
+</a>
+
+<a class="button" href="https://pay.kiwify.com.br/aOhHGJ4?afid=Pwyj9jdZ">
+Iogurte Caseiro – Método Completo
+</a>
+
+<a class="button" href="https://pay.kiwify.com.br/7YievkC?afid=LN6ypk5G">
+700 Receitas Fit – Zero Açúcar
+</a>
+
+<a class="button" href="https://pay.kiwify.com.br/ikvzup8?afid=Bg0IdCBL">
+Recheios que Não Vão ao Fogo
+</a>
+
+<a class="button mini" href="https://bit.ly/4q4uoZW">
+MINI PRODUTO – OFERTA ESPECIAL
+</a>
+
+</div>
+
+<script>
+let time = 240;
+const timer = document.getElementById("timer");
+
+setInterval(()=>{
+  let m = Math.floor(time / 60);
+  let s = time % 60;
+  timer.textContent =
+    String(m).padStart(2,"0") + ":" +
+    String(s).padStart(2,"0");
+  if(time > 0) time--;
+},1000);
+</script>
+
+</body>
+</html>
